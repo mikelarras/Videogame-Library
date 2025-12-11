@@ -4,7 +4,7 @@ import styles from './GameList.module.css';
 
 export default function GameList() {
   return (
-    <ol className={styles.gameList}>
+    <ol className={styles.gameList} data-testid="game-list">
       {games.map((game) => (
         <GameListCard
           key={game.id}

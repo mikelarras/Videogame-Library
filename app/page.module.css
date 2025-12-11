@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomeText {
+    font-size: 3em;
+}
+
+.welcomeImage {
+    width: 30em;
+}

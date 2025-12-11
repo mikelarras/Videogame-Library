@@ -10,7 +10,6 @@ export default function GameList() {
           key={game.id}
           gameImage={game.image}
           gameName={game.name}
-          gameDescription="Sin descripción"
         />
       ))}
     </ol>

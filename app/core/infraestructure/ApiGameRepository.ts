@@ -16,7 +16,7 @@ export const ApiGameRepository: GameRepository = {
     listByYear: async (year: number) => {
         const epochDateFrom = yearToEpochTimestamp(year);
         const epochDateTo = yearToEpochTimestamp(year + 1);
-        const gamesRequestBody = `fields id, name, cover; where first_release_date > ${epochDateFrom} & first_release_date < ${epochDateTo} ; limit 20;`;
+        const gamesRequestBody = `fields id, name, cover; where first_release_date > ${epochDateFrom} & first_release_date < ${epochDateTo} ; limit 10;`;
 
         const gameListDTO: ApiGameDTO[] = await postRequest(
             'https://api.igdb.com/v4/games',
@@ -31,7 +31,8 @@ export const ApiGameRepository: GameRepository = {
                           'https://api.igdb.com/v4/covers',
                           imageRequestBody
                       )
-                    : [{ url: '' }];
+                    : [{ url: null }];
+                console.log(imageDTO);
                 return { gameDTO, imageDTO };
             })
         );
@@ -44,12 +45,12 @@ export const ApiGameRepository: GameRepository = {
     },
 };
 
-const mapGameFromDTO = (gameDTO: ApiGameDTO, imageDTO?: ApiImageDTO) => {
-    if (!imageDTO) {
+const mapGameFromDTO = (gameDTO: ApiGameDTO, imageDTO: ApiImageDTO) => {
+    if (!imageDTO.url) {
         return {
             id: gameDTO.id,
             name: gameDTO.name,
-            cover: '',
+            cover: null,
         };
     }
 

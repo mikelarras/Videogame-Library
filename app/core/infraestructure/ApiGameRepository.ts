@@ -12,11 +12,13 @@ interface ApiGameDTO {
     cover?: number;
 }
 
+const GAMES_TO_FETCH = 10;
+
 export const ApiGameRepository: GameRepository = {
     listByYear: async (year: number) => {
         const epochDateFrom = yearToEpochTimestamp(year);
         const epochDateTo = yearToEpochTimestamp(year + 1);
-        const gamesRequestBody = `fields id, name, cover; where first_release_date > ${epochDateFrom} & first_release_date < ${epochDateTo} ; limit 10;`;
+        const gamesRequestBody = `fields id, name, cover; where first_release_date > ${epochDateFrom} & first_release_date < ${epochDateTo} ; limit ${GAMES_TO_FETCH};`;
 
         const gameListDTO: ApiGameDTO[] = await postRequest(
             'https://api.igdb.com/v4/games',
@@ -32,7 +34,7 @@ export const ApiGameRepository: GameRepository = {
                           imageRequestBody
                       )
                     : [{ url: null }];
-                console.log(imageDTO);
+
                 return { gameDTO, imageDTO };
             })
         );

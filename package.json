@@ -1,40 +1,46 @@
 {
-  "name": "my-videogame-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "test": "jest"
-  },
-  "dependencies": {
-    "next": "16.0.8",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.28.5",
-    "@babel/preset-react": "^7.28.5",
-    "@babel/preset-typescript": "^7.28.5",
-    "@tailwindcss/postcss": "^4",
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-jest": "^30.2.0",
-    "dotenv": "^17.2.3",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.8",
-    "jest": "^30.2.0",
-    "jest-environment-jsdom": "^30.2.0",
-    "node-fetch": "^2.7.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "name": "my-videogame-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "test": "jest"
+    },
+    "dependencies": {
+        "next": "16.0.8",
+        "react": "19.2.1",
+        "react-dom": "19.2.1"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.28.5",
+        "@babel/preset-react": "^7.28.5",
+        "@babel/preset-typescript": "^7.28.5",
+        "@eslint/eslintrc": "^3.3.3",
+        "@eslint/js": "^9.39.2",
+        "@tailwindcss/postcss": "^4",
+        "@testing-library/dom": "^10.4.1",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.0",
+        "@testing-library/user-event": "^14.6.1",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "babel-jest": "^30.2.0",
+        "dotenv": "^17.2.3",
+        "eslint": "^9",
+        "eslint-config-next": "16.0.8",
+        "eslint-plugin-react": "^7.37.5",
+        "globals": "^16.5.0",
+        "jest": "^30.2.0",
+        "jest-environment-jsdom": "^30.2.0",
+        "node-fetch": "^2.7.0",
+        "prettier": "^3.7.4",
+        "tailwindcss": "^4",
+        "typescript": "^5",
+        "typescript-eslint": "^8.50.0"
+    }
 }

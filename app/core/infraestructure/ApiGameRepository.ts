@@ -26,10 +26,12 @@ export const ApiGameRepository: GameRepository = {
         const gameListWithCovers = await Promise.all(
             gameListDTO.map(async (gameDTO) => {
                 const imageRequestBody = `fields url; where id=${gameDTO.cover};`;
-                const imageDTO = await postRequest(
-                    'https://api.igdb.com/v4/covers',
-                    imageRequestBody
-                );
+                const imageDTO = gameDTO.cover
+                    ? await postRequest(
+                          'https://api.igdb.com/v4/covers',
+                          imageRequestBody
+                      )
+                    : [{ url: '' }];
                 return { gameDTO, imageDTO };
             })
         );

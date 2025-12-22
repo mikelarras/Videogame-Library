@@ -4,24 +4,49 @@
     justify-content: flex-start;
     gap: 1em;
     width: 100%;
-    border: 1px solid var(--border);
     border-radius: 13px;
     padding: 0.5em;
     position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
 }
 
 .gameListCard p:first-of-type {
     font-weight: var(--font-weight-bold);
 }
 
+.backgroundImage,
+.backgroundGradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.backgroundImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+    opacity: 0.5;
+}
+
+.backgroundGradient {
+    background: #ffffff;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(29, 30, 34, 1) 90%
+    );
+    z-index: -1;
+}
+
 .gameImage {
     width: 48px;
     height: 64px;
     object-fit: cover;
-    border-radius:8px;
+    border-radius: 8px;
 }
 
 .plusIcon {

@@ -1,10 +1,15 @@
-import { GameRepository } from "../domain/GameRepository";
+import { GameRepository } from '../domain/GameRepository';
 
 export class GameService {
-    constructor( private gameRepository: GameRepository ) {}
+    constructor(private gameRepository: GameRepository) {}
 
     async getGamesByYear(year: number) {
-        const games = await this.gameRepository.listByYear(year)
-        return games
+        const games = await this.gameRepository.listByYear(year);
+        return games;
+    }
+
+    async getGameDetailsById(gameId: number) {
+        const gameDetails = await this.gameRepository.getGameDetails(gameId);
+        return gameDetails;
     }
 }

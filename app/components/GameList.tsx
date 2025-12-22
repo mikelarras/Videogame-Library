@@ -16,13 +16,18 @@ export default function GameList() {
 
     return (
         <ol className={styles.gameList} data-testid="game-list">
-            {games.map((game: Game) => (
-                <GameListCard
-                    key={game.id}
-                    gameImage={game.cover}
-                    gameName={game.name}
-                />
-            ))}
+            {games.length > 0 ? (
+                games.map((game: Game) => (
+                    <GameListCard
+                        key={game.id}
+                        gameId={game.id}
+                        gameImage={game.cover}
+                        gameName={game.name}
+                    />
+                ))
+            ) : (
+                <p>Cargando juegos...</p>
+            )}
         </ol>
     );
 }

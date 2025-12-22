@@ -2,7 +2,7 @@ import styles from './Header.module.css';
 
 export default function Header() {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <span>Video Game Library</span>
             <div className={styles.searchContainer}>
                 <label htmlFor="game-search" className="sr-only">
@@ -21,6 +21,6 @@ export default function Header() {
                 />
             </div>
             <span>My Games</span>
-        </div>
+        </header>
     );
 }

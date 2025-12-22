@@ -1,5 +1,6 @@
-import { Game } from './Game'
+import { Game, GameDetails } from './Game';
 
 export interface GameRepository {
-    listByYear: (year: number) => Promise<Game[]>
+    listByYear: (year: number) => Promise<Game[]>;
+    getGameDetails: (gameId: number) => Promise<GameDetails>;
 }

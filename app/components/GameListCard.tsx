@@ -11,7 +11,6 @@ export default function GameListCard({
     gameName: string;
 }) {
     const backgroundImageUrl = gameImage ?? './imagenes/no_disponible.png';
-    console.log(gameName, backgroundImageUrl);
     return (
         <li>
             <Link href={`/games/${gameId}`} className={styles.gameListCard}>

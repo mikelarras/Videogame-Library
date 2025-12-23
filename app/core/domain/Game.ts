@@ -10,9 +10,9 @@ export interface GameDetails {
     cover: string | null;
     year: number;
     genres: string[];
-    companies: string[];
+    companies: string[] | null;
     platforms: string[];
-    screenshots: string[];
+    screenshots: string[] | null;
     summary: string | null;
     story: string | null;
 }

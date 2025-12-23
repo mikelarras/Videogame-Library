@@ -12,6 +12,7 @@ export default function Header() {
                     src="./search-icon.svg"
                     alt=""
                     className={styles.searchIcon}
+                    data-testid="search-icon"
                 />
                 <input
                     id="game-search"

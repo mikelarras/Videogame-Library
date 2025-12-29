@@ -1,0 +1,37 @@
+.screenshots {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.slideButtonContainer {
+    width: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.slideButtonContainer img {
+    height: 30px;
+}
+
+.imageContainer {
+    width: 100%;
+    max-width: 40rem;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.galleryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}

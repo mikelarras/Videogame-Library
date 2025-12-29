@@ -1,0 +1,57 @@
+.mainImage {
+    width: 100%;
+    object-fit: cover;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.backgroundBlur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 95%,
+        #1b1d1f 100%
+    );
+}
+
+.content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: var(--secondary-text);
+}
+
+.title h1 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.title span {
+    font-size: var(--text-small);
+}
+
+.technicalDetails {
+    font-size: var(--text-small);
+    color: var(--secondary-text);
+}
+
+.technicalDetails span {
+    color: var(--main-text);
+}
+
+.content h1,
+.story h3:first-of-type {
+    color: var(--main-text);
+}
+
+.story h3 {
+    margin-bottom: 0.6rem;
+}

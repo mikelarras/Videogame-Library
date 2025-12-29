@@ -161,7 +161,7 @@ const mapGameDetailsFromDTO = (
     return {
         id: gameDetailsDTO.id,
         name: gameDetailsDTO.name,
-        cover: imageDTO.url || null,
+        cover: imageDTO.url ? `https:${imageDTO.url}` : null,
         year: epochTimestampToYear(gameDetailsDTO.first_release_date),
         genres: genresDTO.map((genre: APIGenreDTO) => genre.name),
         companies: ['Jakala'],
@@ -169,8 +169,11 @@ const mapGameDetailsFromDTO = (
             (platform: APIPlatformDTO) => platform?.name ?? null
         ),
         screenshots: screenshotDTO
-            ? screenshotDTO.map(
-                  (screenshot: APIScreenshotDTO) => screenshot.url
+            ? screenshotDTO.map((screenshot: APIScreenshotDTO) =>
+                  `https:${screenshot.url}`.replace(
+                      't_thumb',
+                      't_screenshot_big'
+                  )
               )
             : null,
         summary: gameDetailsDTO.summary || 'No hay descripción',

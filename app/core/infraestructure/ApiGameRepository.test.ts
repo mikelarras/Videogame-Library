@@ -57,7 +57,7 @@ describe('the game details API repository', () => {
 
         const mockedPlatformData = [{ name: 'PS6' }];
 
-        const mockedScreenshotData = [{ url: 'https://captura1' }];
+        const mockedScreenshotData = [{ url: '//captura1' }];
 
         global.fetch = jest
             .fn()
@@ -92,7 +92,7 @@ describe('the game details API repository', () => {
         expect(gameDetails).toEqual({
             id: 1,
             name: 'Game 1',
-            cover: '//prueba',
+            cover: 'https://prueba',
             year: 2025,
             genres: ['Accion'],
             companies: ['Jakala'],

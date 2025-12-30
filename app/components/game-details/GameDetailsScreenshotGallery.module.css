@@ -2,6 +2,15 @@
     padding: 0 2rem 2rem 2rem;
 }
 
+.title {
+    display: inline-block;
+}
+
+.fullTitle {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .slideButtonContainer {
     width: 5rem;
     display: grid;
@@ -9,6 +18,11 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+}
+
+.slideButtonContainer button {
+    display: flex;
+    justify-content: center;
 }
 
 .slideButtonContainer img {

@@ -53,7 +53,14 @@ export default function GameDetailsScreenshotGallery({
     return (
         <section className={styles.screenshots}>
             <div className={styles.galleryHeader}>
-                <h3>Screenshots ({screenshots?.length ?? 0})</h3>
+                <div className={styles.fullTitle}>
+                    <span className={styles.title}>
+                        <img src="/photo-camera.svg" />
+                    </span>
+                    <h3 className={styles.title}>
+                        Screenshots ({screenshots?.length ?? 0})
+                    </h3>
+                </div>
                 <div className={styles.slideButtonContainer}>
                     <button onClick={previousImage}>
                         <img

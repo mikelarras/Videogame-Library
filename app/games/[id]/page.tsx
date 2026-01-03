@@ -22,19 +22,26 @@ export default function GameDetailsView() {
             .catch(console.error);
     }, [id]);
 
-    if (!gameDetails) {
-        return <p>Cargando detalles del juego {id}...</p>;
-    }
-
     return (
         <div className={styles.pageContainer}>
-            <Link href={`/`} className={styles.homeIcon}>
-                <img src="/home-icon.svg"></img>
-            </Link>
-
-            <div className={styles.gameDetailsView}>
-                <GameDetailsInfo gameDetails={gameDetails} />
-            </div>
+            <header className={styles.detailsHeader}>
+                <Link href={`/`}>
+                    <img className={styles.homeIcon} src="/home-icon.svg"></img>
+                </Link>
+                <div className={styles.addButton}>
+                    <span>Add to library</span>
+                    <img src="/add-icon.svg"></img>
+                </div>
+            </header>
+            {!gameDetails ? (
+                <p className={styles.loadingText}>
+                    Cargando detalles del juego {id} ...
+                </p>
+            ) : (
+                <div className={styles.gameDetailsView}>
+                    <GameDetailsInfo gameDetails={gameDetails} />
+                </div>
+            )}
         </div>
     );
 }

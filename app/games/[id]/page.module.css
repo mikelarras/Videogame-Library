@@ -15,7 +15,21 @@
     padding-top: 2rem;
 }
 
-.homeIcon {
-    width: 40px;
-    height: 40px;
+.loadingText {
+    margin-top: 1rem;
+}
+
+.detailsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addButton {
+    display: flex;
+    gap: 0.5rem;
+    background-color: #498b8b;
+    border-radius: 2rem;
+    padding: 10px 20px;
+    font-weight: 500;
 }

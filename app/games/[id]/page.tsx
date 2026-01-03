@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import { GameDetails } from '@/app/core/domain/Game';
 import GameDetailsInfo from '@/app/components/GameDetailsInfo';
 import styles from './page.module.css';
+import Link from 'next/link';
 
 export default function GameDetailsView() {
     const params = useParams();
@@ -26,8 +27,14 @@ export default function GameDetailsView() {
     }
 
     return (
-        <div className={styles.gameDetailsView}>
-            <GameDetailsInfo gameDetails={gameDetails} />
+        <div className={styles.pageContainer}>
+            <Link href={`/`} className={styles.homeIcon}>
+                <img src="/home-icon.svg"></img>
+            </Link>
+
+            <div className={styles.gameDetailsView}>
+                <GameDetailsInfo gameDetails={gameDetails} />
+            </div>
         </div>
     );
 }

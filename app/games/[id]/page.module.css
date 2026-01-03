@@ -2,7 +2,7 @@
     width: 100%;
     border: 1px solid var(--border);
     border-radius: 1.3rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
     overflow: hidden;
     background-color: #1b1d1f;
@@ -22,14 +22,29 @@
 .detailsHeader {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.homeIcon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.homeIcon img {
+    width: 100%;
 }
 
 .addButton {
     display: flex;
     gap: 0.5rem;
-    background-color: #498b8b;
+    background-color: #449797;
     border-radius: 2rem;
     padding: 10px 20px;
     font-weight: 500;
+}
+
+.addButton:hover {
+    background-color: #498b8b;
+    cursor: pointer;
 }

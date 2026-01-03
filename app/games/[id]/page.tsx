@@ -25,8 +25,8 @@ export default function GameDetailsView() {
     return (
         <div className={styles.pageContainer}>
             <header className={styles.detailsHeader}>
-                <Link href={`/`}>
-                    <img className={styles.homeIcon} src="/home-icon.svg"></img>
+                <Link href={`/`} className={styles.homeIcon}>
+                    <img src="/home-icon.svg"></img>
                 </Link>
                 <div className={styles.addButton}>
                     <span>Add to library</span>
